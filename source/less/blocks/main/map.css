@@ -1,0 +1,18 @@
+.map__markup {
+  background: url("../../../img/map_bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 540px;
+  position: relative;
+}
+.map__markup::after {
+  position: absolute;
+  content: "";
+  background: url("../../../img/map_pin.svg");
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 50px;
+  left: 51%;
+  top: 50%;
+  transform: translate(-62%, -50%);
+}

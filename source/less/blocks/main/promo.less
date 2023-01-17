@@ -1,0 +1,307 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo__carousel__item {
+  text-align: left;
+  padding-left: 42%;
+  position: relative;
+
+  &:first-of-type {
+    background-color: @flatWhite;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 105px;
+      width: 600px;
+      height: 600px;
+      background: url("../../img/flat_white_img_desktop.png");
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: @lavenderLatte;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 105px;
+      width: 600px;
+      height: 600px;
+      background: url("../../img/lavender_img_desktop.png");
+    }
+  }
+
+  &:last-of-type {
+    background-color: @espresso;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 105px;
+      width: 600px;
+      height: 600px;
+      background: url("../../img/espresso_img_desktop.png");
+    }
+  }
+}
+
+.promo__carousel__item>.container {
+  margin: 180px 0 242px 0;
+  padding: 0;
+}
+
+.badge {
+  color: @basePrimary;
+  font-weight: @boldWeight;
+  text-transform: uppercase;
+  font-size: @smallFont;
+}
+
+.promo__title {
+  font-size: 56px;
+  margin: 4px 0 16px 0;
+}
+
+.promo__carousel__item>* {
+  max-width: 625px;
+}
+
+.promo__description {
+  line-height: 160%;
+  margin-bottom: 40px;
+}
+
+.promo__price__old {
+  text-decoration-line: line-through;
+  color: @basePrimary;
+}
+
+.promo__price__new {
+  font-size: 20px;
+  margin-left: 6px;
+  margin-right: 20px;
+  font-weight: @semiBoldWeight;
+}
+
+.promo__carousel > .swiper-button-next, .promo__carousel > .swiper-button-prev{
+  border: none;
+  background: none;
+  position: absolute;
+  top: 0;
+  margin-top: 0;
+  width: 80px;
+  height: inherit;
+
+  &::after{
+    content: '';
+  }
+
+  &:hover{
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
+.promo__carousel > .swiper-button-next{
+  &:hover, &:focus{
+    background: linear-gradient(270deg,#fff 0,rgba(255,255,255,0) 100%);
+  }
+
+  &:active{
+    background: linear-gradient(270deg,rgba(120,89,207,.25) 0,rgba(120,89,207,0) 100%);
+  }
+
+  &::after{
+    height: 100%;
+    background: url("../../../img/arrow_right.svg");
+    background-position: center center;
+    width: 12px;
+    background-repeat: no-repeat;
+  }
+}
+
+.promo__carousel > .swiper-button-prev{
+  &:hover, &:focus{
+    background: linear-gradient(90deg,#fff 0,rgba(255,255,255,0) 100%);
+  }
+
+  &:active{
+    background: linear-gradient(90deg,rgba(120,89,207,.25) 0,rgba(120,89,207,0) 100%);
+  }
+
+  &::after{
+    height: 100%;
+    background: url("../../../img/arrow_left.svg");
+    background-position: center center;
+    width: 12px;
+    background-repeat: no-repeat;
+  }
+}
+
+.promo__carousel > .swiper-pagination > span{
+  height: 4px;
+  width: 62px;
+  background: @baseWhite;
+  border-radius: 0;
+
+  &:hover{
+    background: @primaryOpacity;
+  }
+}
+
+.promo__carousel > .swiper-pagination .swiper-pagination-bullet-active{
+  background: @basePrimary;
+}
+
+@media (max-width: 1440px) {
+  .promo__carousel__item>.container {
+    margin: 60px 0 308px 0;
+  }
+
+  .promo__carousel__item {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .promo__carousel__list {
+    padding-bottom: 188px;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .promo__carousel__item {
+    &:first-of-type {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -188px;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 476px;
+        height: 476px;
+        background: url("../../../img/flat_white_img_tablet.png");
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -188px;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 476px;
+        height: 476px;
+        background: url("../../../img/lavender_img_tablet.png");
+      }
+    }
+
+    &:last-of-type {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -188px;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 476px;
+        height: 476px;
+        background: url("../../../img/espresso_img_tablet.png");
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .promo__carousel__item>.container {
+    padding: 0 20px;
+    margin: 310px 0 60px 0;
+  }
+
+  .promo__carousel__list{
+    padding-bottom: 0;
+  }
+
+  .promo__title {
+    font-size: 36px;
+  }
+
+  .promo__description {
+    font-size: 14px;
+  }
+
+  .promo__carousel__item {
+    &:first-of-type {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 280px;
+        height: 280px;
+        background: url("../../../img/flat_white_img_mobile.png");
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 280px;
+        height: 280px;
+        background: url("../../../img/lavender_img_mobile.png");
+      }
+    }
+
+    &:last-of-type {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 280px;
+        height: 280px;
+        background: url("../../../img/espresso_img_mobile.png");
+      }
+    }
+  }
+}

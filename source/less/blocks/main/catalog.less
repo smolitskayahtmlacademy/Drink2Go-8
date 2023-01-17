@@ -1,0 +1,261 @@
+.catalog {
+  padding-top: 100px;
+  background: @lighestGray;
+}
+
+.catalog ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter__btn {
+  font-size: 14px
+}
+
+.catalog__filters {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.filters {
+  flex: 0 0 23%;
+  max-width: 23%;
+}
+
+.catalog__sort {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.sort {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 30px;
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.catalog__item {
+  flex: 0 0 31%;
+  max-width: 31%;
+  border-radius: 4px;
+  background: @baseWhite;
+  transition: .5s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.catalog__item__ctn {
+  max-width: 257px;
+  margin: 0 auto;
+  padding: 50px 0 32px 0;
+}
+
+.catalog__item__image__ctn img {
+  margin: 0 auto;
+}
+
+.catalog__item__info {
+  display: flex;
+}
+
+.catalog__item__info span {
+  margin: 0;
+}
+
+.btn__catalog {
+  margin-left: auto;
+}
+
+.filters__title {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: @semiBoldWeight;
+}
+
+.filters__group {
+  margin-bottom: 30px;
+}
+
+.catalog__item__description {
+  font-size: 14px;
+  line-height: 143%;
+}
+
+.sort,
+.select__sort {
+  font-weight: 600;
+}
+
+.filters__price__number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters__price__number>input {
+  max-width: 124px;
+}
+
+.price__line {
+  user-select: none;
+  color: @baseGrey;
+  font-weight: @semiBoldWeight;
+}
+
+.filters__subgroup__item {
+  margin-bottom: 20px;
+}
+
+.btn__catalog a {
+  padding: 8px 20px 8px 46px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../../../img/union_button.svg");
+    background-repeat: no-repeat;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 16px;
+  }
+}
+
+.paginator {
+  display: flex;
+  justify-content: right;
+  margin: 60px 0 120px 0;
+}
+
+.paginator__pages>.active {
+  background: none;
+  color: @baseBlack;
+  font-weight: 600;
+  cursor: auto;
+}
+
+.catalog__item__image__ctn{
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+
+  .filters,
+  .catalog__sort {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .filters form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .catalog__form__buttons {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .filters__group {
+    flex: 1;
+  }
+
+  .filters__price__number>input {
+    max-width: 92px;
+  }
+
+  .catalog__form__buttons>a {
+    margin-left: 30px;
+  }
+
+  .catalog__item {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .catalog__form__buttons {
+    white-space: pre-line;
+  }
+
+  .primary__btn.filter__btn,
+  .secondary__btn.sml__btn {
+    padding: 10.6px 14.5px;
+  }
+
+  .catalog__form__buttons a {
+    margin-left: 0;
+  }
+
+  .catalog__form__buttons button {
+    margin-bottom: 36px;
+  }
+
+  .filters__price__number>input {
+    max-width: 118px;
+  }
+
+  .catalog__item__ctn {
+    max-width: 240px;
+  }
+
+  .paginator__prev,
+  .paginator__next {
+    font-size: 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("../../../img/arrow_paginator.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 10px;
+      height: 6px;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  .paginator__next {
+    transform: rotate(90deg) matrix(0, 1, 1, 0, 0, 0);
+  }
+
+  .paginator__pages button {
+    margin-left: 20px;
+  }
+
+  .paginator__pages button:last-of-type{
+    margin-right: 20px;
+  }
+
+  .paginator{
+    justify-content: center;
+  }
+}

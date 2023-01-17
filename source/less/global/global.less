@@ -1,0 +1,43 @@
+/* здесь используйте глобальные селекторы img, body, html и так далее*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Arial';
+  color: @baseBlack;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.visually-hidden{
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1439px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container{
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
